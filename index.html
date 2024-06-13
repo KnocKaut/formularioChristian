@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Calificación</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#mensajeAgradecimiento {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h2>Formulario de Calificación</h2>
+
+<form action="#" method="post" id="calificacionForm">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
+
+  <label for="edad">Edad:</label>
+  <input type="number" id="edad" name="edad" required>
+
+  <label for="nivel">Nivel Académico:</label>
+  <select id="nivel" name="nivel" required>
+    <option value="primaria">Primaria</option>
+    <option value="secundaria">Secundaria</option>
+    <option value="preparatoria">Preparatoria</option>
+    <option value="universidad">Universidad</option>
+  </select>
+
+  <label for="calificacion">Calificación (1 al 10):</label>
+  <input type="number" id="calificacion" name="calificacion" min="1" max="10" required>
+
+  <input type="submit" value="Enviar">
+</form>
+
+<div id="mensajeAgradecimiento">
+  <p>¡Gracias por enviar tu calificación!</p>
+</div>
+
+</div>
+
+<script>
+document.getElementById("calificacionForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Evitar que se envíe el formulario
+  // Aquí puedes agregar código para procesar los datos del formulario, como enviarlos a un servidor
+  document.getElementById("calificacionForm").style.display = "none"; // Ocultar el formulario
+  document.getElementById("mensajeAgradecimiento").style.display = "block"; // Mostrar el mensaje de agradecimiento
+});
+</script>
+
+</body>
+</html>
