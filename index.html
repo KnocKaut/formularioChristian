@@ -3,113 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <h1>Perez Estrada Christian Abraham</h1>
-  <h1>Tsompantzi Ramirez Cosme Ernesto</h1>
+<body BACKGROUND="https://static.vecteezy.com/system/resources/thumbnails/009/831/146/small/banner-web-template-abstract-blue-and-golden-wave-curved-lines-overlapping-layer-design-on-dark-blue-background-luxury-style-vector.jpg">
 <title>Formulario de Calificación</title>
+<i> <u><h1>Calor Y Temperatura</h1></u></i>
+<h3>Integrantes</h3>
+	<Li>Aguirre Salazar Michel Guillermo</Li>
+	<Li>Gonzales Rosas Luis Angel</Li>
+	<Li>Pacheco Alvarez Angel Gabriel</Li>
+	<Li>Sierra Hernandez Osman</Li>
+<h3>4°CPM</h3>
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
-
-.container {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  text-align: center;
-  color: #333;
-}
-
-form {
-  margin-top: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-input[type="text"],
-input[type="number"],
-select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-#mensajeAgradecimiento {
-  display: none;
-  text-align: center;
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border-radius: 4px;
-}
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #2c3e50;
+        color: #fff;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+    }
+    .formulario {
+        width: 400px;
+        margin: 0 auto;
+        background-color: #34495e;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"],
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .stars {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .star {
+        font-size: 24px;
+        color: #fff; /* Cambiando el color de las estrellas a blanco */
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+    .star:hover,
+    .star.active {
+        color: #27ae60; /* Cambiando el color de las estrellas seleccionadas a verde */
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.2s;
+    }
+    .button.green {
+        background-color: #27ae60;
+        color: #fff;
+    }
+    .button.green:hover {
+        background-color: #219d53;
+    }
+    .button.red {
+        background-color: #e74c3c;
+        color: #fff;
+    }
+    .button.red:hover {
+        background-color: #cf4334;
+    }
 </style>
 </head>
 <body>
 
-<div class="container">
-
-<h2>Formulario de Calificación</h2>
-
-<form action="#" method="post" id="calificacionForm">
-  <label for="nombre">Nombre:</label>
-  <input type="text" id="nombre" name="nombre" required>
-
-  <label for="edad">Edad:</label>
-  <input type="number" id="edad" name="edad" required>
-
-  <label for="nivel">Nivel Académico:</label>
-  <select id="nivel" name="nivel" required>
-    <option value="primaria">Primaria</option>
-    <option value="secundaria">Secundaria</option>
-    <option value="preparatoria">Preparatoria</option>
-    <option value="universidad">Universidad</option>
-  </select>
-
-  <label for="calificacion">Calificación (1 al 10):</label>
-  <input type="number" id="calificacion" name="calificacion" min="1" max="10" required>
-
-  <input type="submit" value="Enviar">
-</form>
-
-<div id="mensajeAgradecimiento">
-  <p>¡Gracias por enviar tu calificación!</p>
-</div>
-
+<div class="formulario">
+    <tt><h2>Formulario de Calificacion
+	<br>
+	Para</h2>
+	<h1>Calor Y Temperatura</h1></tt>
+    <form id="calificacionForm">
+        <label for="nombre">Ingresa Solo Un Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+	<br>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required>
+        <br>
+	<br>
+        <label for="nivel">Nivel Académico:</label>
+        <select id="nivel" name="nivel" required>
+            <option value="Kinder">Kinder</option>
+            <option value="Primaria">Primaria</option>
+            <option value="Secundaria">Secundaria</option>
+            <option value="Preparatoria">Preparatoria</option>
+            <option value="Universidad">Universidad</option>
+        </select>
+        <br>
+	<br>
+        <label for="calificacion">Califícanos:</label>
+        <div class="stars" id="calificacion">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+            <span class="star" data-value="6">&#9733;</span>
+            <span class="star" data-value="7">&#9733;</span>
+            <span class="star" data-value="8">&#9733;</span>
+            <span class="star" data-value="9">&#9733;</span>
+            <span class="star" data-value="10">&#9733;</span>
+        </div>
+        
+        <div class="buttons">
+            <button type="submit" class="button green">Aceptar</button>
+            <button type="button" class="button red" onclick="redirectToGoogle()">Cerrar</button>
+        </div>
+    </form>
 </div>
 
 <script>
-document.getElementById("calificacionForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Evitar que se envíe el formulario
-  // Aquí puedes agregar código para procesar los datos del formulario, como enviarlos a un servidor
-  document.getElementById("calificacionForm").style.display = "none"; // Ocultar el formulario
-  document.getElementById("mensajeAgradecimiento").style.display = "block"; // Mostrar el mensaje de agradecimiento
-});
+    const stars = document.querySelectorAll('.star');
+    const calificacion = document.getElementById('calificacion');
+    
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            const value = parseInt(star.getAttribute('data-value'));
+            calificacion.dataset.score = value;
+            for (let i = 0; i < stars.length; i++) {
+                if (i < value) {
+                    stars[i].classList.add('active');
+                } else {
+                    stars[i].classList.remove('active');
+                }
+            }
+        });
+    });
+    
+    function redirectToGoogle() {
+        window.location.href = 'https://www.google.com';
+    }
+    
+    document.getElementById('calificacionForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+        const nombre = formData.get('nombre');
+        const edad = formData.get('edad');
+        const nivel = formData.get('nivel');
+        const calif = calificacion.dataset.score;
+        
+        // Aquí puedes hacer lo que quieras con los datos del formulario, como enviarlos a un servidor
+        
+        alert(`Gracias, ${nombre}, por tu calificación de ${calif}. ¡Gracias por visitarnos!`);
+    });
 </script>
 
 </body>
